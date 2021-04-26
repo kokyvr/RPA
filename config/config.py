@@ -1,9 +1,65 @@
+#Python
+from datetime import datetime
+
+#Aplicaciones de los Bonos
+from applications.bono.apps.descargar_insertar_casos import *
+
+# import time
+# import sys
+# import os, shutil
+# import smtplib
+# import win32com.client
+# from datetime import date
+# from datetime import timedelta
+# from pathlib import Path
+# import traceback
+# from PIL import ImageGrab
+# import pyautogui
+# from keyboard import press
+# #Pywinauto
+# import pywinauto
+# from pywinauto.keyboard import send_keys
+# #Selenium
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as EC
+# from selenium.webdriver.support.ui import Select
+# from selenium.webdriver.common.action_chains import ActionChains
+# #Pandas
+# import pandas as pd
+# #Oracle
+# import cx_Oracle
+# from applications.bono.apps.actualizar_bd import *
+# from applications.bono.apps.datos_bono import *
+# from applications.bono.apps.descargar_adjunto import *
+# from applications.bono.apps.descargar_casos import *
+# from applications.bono.apps.iniciar_sesion import *
+# from applications.bono.apps.insertar_casos import *
+
+# Tools
+# from tools.espera_archivo import *
+# from tools.webdriver_chrome import *
+
+# from applications.bono.apps import *
+# sys.path.append(".")
+# from tools import *
+
+#Conexión a Oracle
+cxn_oracle = r"C:\instantclient_19_10"
+
+#WebDriver
+cxn_oracle = r'C:\chromedriver/chromedriver.exe'
+
+
+#Datos de la Base de Datos
 username = 'user_apoyo1'
 password = 'Fortinate2017'
 dsn = '10.10.10.6/p65dbprd'
 port = 1512
 encoding = 'UTF-8'
 
+#Estructura de la Base de Datos
 sql = """ insert into CASOS_BONOS(
             TICKET,
             DNI,

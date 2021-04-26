@@ -1,8 +1,7 @@
-#Python
-from datetime import datetime
+import sys
+sys.path.append("....")
+import config.config
 
-#Aplicaciones de los Bonos
-from applications.bono.apps.descargar_insertar_casos import descargar_insertar_casos
 
 
 if __name__ == ('__main__'):
@@ -25,10 +24,10 @@ if __name__ == ('__main__'):
         if comando == 'Bono.1':
             # var_fecha =date.today() - timedelta(days=8-1)
             # print(var_fecha)
-            descargar_insertar_casos('Bono 600',9,9)
-            descargar_insertar_casos('Bono BFU',9,9)
-            descargar_insertar_casos('Bono RURAL',9,9)
-            descargar_insertar_casos('Bono URBANO',9,9)
+            descargar_insertar_casos('Bono 600',7,1)
+            descargar_insertar_casos('Bono BFU',7,1)
+            descargar_insertar_casos('Bono RURAL',7,1)
+            descargar_insertar_casos('Bono URBANO',7,1)
 
 
         elif comando == 'Bono.2':
@@ -38,3 +37,4 @@ if __name__ == ('__main__'):
 
     else:
         print('No se ha elegido ninguna opción')
+    
