@@ -10,6 +10,7 @@ from .iniciar_sesion import iniciar_sesion
 from .descargar_casos import descargar_casos
 from .insertar_casos import insertar_casos
 from tools.webdriver_chrome import webdriver_chrome
+from tools.webdriver_chrome_proxy import webdriver_chrome_proxy
 
 def descargar_insertar_casos(tipo_bono,dias_anteriores,repeticiones,caso = 'todos'):
     print('-'*80)

@@ -43,8 +43,8 @@ def datos_bono(bono):
         my_dict_bono['pwd'] = 'L@urdes2013'
         my_dict_bono['ruta_bono'] = r'G:\Mi unidad\Casos\Casos_URBANO'
         #URL
-        my_dict_bono['url'] = 'https://consultas.yomequedoencasa.pe/intranet_/index.php?alter=5'
-        my_dict_bono['url_alternativo'] = 'https://consultas.yomequedoencasa.pe/intranet_/'
+        my_dict_bono['url'] = 'https://consultas.yomequedoencasa.pe/intranet_/'
+        my_dict_bono['url_alternativo'] = 'https://consultas.yomequedoencasa.pe/intranet_/index.php'
         #XPATH
         my_dict_bono['path_user'] = '/html/body/div[1]/div/div/div/article/div/div/div/form/div[1]/input'
         my_dict_bono['path_pwd'] = '/html/body/div[1]/div/div/div/article/div/div/div/form/div[2]/input'

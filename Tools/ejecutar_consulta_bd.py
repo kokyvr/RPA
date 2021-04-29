@@ -6,7 +6,7 @@ import cx_Oracle
 #Librerias Propias
 from config import config
 
-def ejecutar_consulta_bd(tipo_bono,query):
+def ejecutar_consulta_bd(query,var_date,argumentos):
     print('-'*80)
     try:
         #Oracle
@@ -24,14 +24,21 @@ def ejecutar_consulta_bd(tipo_bono,query):
         # create a cursor
         cursor = connection.cursor()
         
-            try:
+        try:
+            print("Ejecutando comando")
+
+            if argumentos == 'SI':
+                cursor.execute(query,{'var_date':var_date})
+            else:
                 cursor.execute(query)
-                connection.commit()
-            except:
-                print(f'Error {traceback.format_exc()} ')
+
+            connection.commit()
+            print("Terminando la ejecución del comando")
+        except:
+            print(f'Error {traceback.format_exc()} ')
         
         connection.close()
 
     except:
-        print(f'Existe un error en el {tipo_bono}: {traceback.format_exc()} del query : {query}')
+        print(f'Existe un error: {traceback.format_exc()} del query : {query}')
     print('-'*80)

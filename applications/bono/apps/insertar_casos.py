@@ -23,10 +23,12 @@ def insertar_casos(tipo_bono,inicio,fin, caso = 'todos'):
                 ),
             sheet_name = 'Sheet1',
             skiprows = 4,
-            usecols = 'A:AL')
+            usecols = 'A:AL',
+            converters={'DNI': lambda x: str(x)},
+            )
         
         bd_bono = df_bono.fillna(' ')
-
+    
         #Oracle
         try:
             print('Oracle por Iniciar')
@@ -51,15 +53,15 @@ def insertar_casos(tipo_bono,inicio,fin, caso = 'todos'):
         for index, row in bd_bono.iterrows():
             iteraciones += 1
             tb_valores= [
-                row['TICKET'],
-                row['DNI'],
+                str(row['TICKET']),
+                str(row['DNI']),
                 str(row['CELULAR']),
                 str(row['CORREO']),
                 str(row['CASO']),
                 str(bono['sigla']),
                 str(row['FECHA DE REGISTO']),
                 str(row['DEPARTAMENTO']),
-                row['ID'],
+                str(row['ID']),
                 str(row['APELLIDO PATERNO']),
                 str(row['APELLIDO MATERNO']),
                 str(row['NOMBRES']),
@@ -93,7 +95,7 @@ def insertar_casos(tipo_bono,inicio,fin, caso = 'todos'):
             try:
                 cursor.execute(sql,tb_valores)
                 connection.commit()
-                #print(f"Actualizado item: {row['ID']} hora {datetime.now()}")
+                # print(f"Actualizado item: {row['DNI']}")
                 exito += 1
             except:
                 tabla_error.append(bd_bono.iloc[index])

@@ -1,7 +1,10 @@
 #Librerias Python
 import traceback
 import time
-
+import pickle
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.keys import Keys
+from tools.webdriver_chrome import webdriver_chrome
 
 def iniciar_sesion(driver,bono):
     try:
@@ -9,14 +12,33 @@ def iniciar_sesion(driver,bono):
         inicio = True
         contador = 1
         while inicio == True:
+            # cookies = pickle.load(open("cookies.pkl", "rb"))
+            # for cookie in cookies:
+            #     driver.add_cookie(cookie)
+
             #Inicios alternativos
-            if contador % 2 != 0:
+            if contador == 1:
                 driver.maximize_window()
                 driver.get(bono['url'])
-            else:
+                time.sleep(5)
+                driver.refresh()
+                time.sleep(5)
+            elif contador % 2 == 0:
+                a = ActionChains(driver)
+                a.key_down(Keys.CONTROL).send_keys('F').key_up(Keys.CONTROL).perform()
+                time.sleep(5)
+            elif contador % 3 == 0:
                 driver.maximize_window()
                 driver.get(bono['url_alternativo'])
-            
+                driver.refresh()
+                time.sleep(5)
+            else:
+                driver.maximize_window()
+                driver.get(bono['url'])
+                time.sleep(5)
+                driver.refresh()
+                time.sleep(5)
+
             contador +=1
 
             #Acciones en la página
@@ -26,6 +48,7 @@ def iniciar_sesion(driver,bono):
             driver.find_element_by_id('btnIngresar').click()
             time.sleep(15)
             print('Ingresando a la plataforma')
+            # pickle.dump( driver.get_cookies() , open("cookies.pkl","wb"))
             try:
                 driver.find_element_by_id('btnIngresar')
                 print('Error en el ingreso, intentantando nuevamente')
