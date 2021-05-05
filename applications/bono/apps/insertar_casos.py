@@ -4,6 +4,10 @@ import traceback
 import cx_Oracle
 #Librerias Python - Pandas
 import pandas as pd
+#Librerias BeautifulSoup
+from bs4 import BeautifulSoup
+
+import cgi
 
 #Librerias Propias
 from config import config
@@ -24,10 +28,19 @@ def insertar_casos(tipo_bono,inicio,fin, caso = 'todos'):
             sheet_name = 'Sheet1',
             skiprows = 4,
             usecols = 'A:AL',
-            converters={'DNI': lambda x: str(x)},
+            converters={
+                'DNI': lambda x: str(x),
+                'NOMBRES': lambda x: BeautifulSoup(x,"html.parser").text,
+                'APELLIDO PATERNO': lambda x: BeautifulSoup(x,"html.parser").text ,
+                'APELLIDO MATERNO': lambda x: BeautifulSoup(x,"html.parser").text ,
+                'BENEFICIARIO': lambda x: BeautifulSoup(x,"html.parser").text ,
+                'PROVINCIA': lambda x: BeautifulSoup(x,"html.parser").text ,
+                'DISTRITO': lambda x: BeautifulSoup(x,"html.parser").text ,
+                'LUGAR': lambda x: BeautifulSoup(x,"html.parser").text ,
+                },
             )
-        
         bd_bono = df_bono.fillna(' ')
+        # print(bd_bono)
     
         #Oracle
         try:

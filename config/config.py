@@ -1,9 +1,6 @@
 #Python
 from datetime import datetime
 
-#Aplicaciones de los Bonos
-from applications.bono.apps.descargar_insertar_casos import *
-
 # import time
 # import sys
 # import os, shutil

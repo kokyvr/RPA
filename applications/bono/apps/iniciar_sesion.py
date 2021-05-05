@@ -23,6 +23,9 @@ def iniciar_sesion(driver,bono):
                 time.sleep(5)
                 driver.refresh()
                 time.sleep(5)
+            elif contador == 5:
+                return contador
+                break
             elif contador % 2 == 0:
                 a = ActionChains(driver)
                 a.key_down(Keys.CONTROL).send_keys('F').key_up(Keys.CONTROL).perform()
@@ -48,7 +51,7 @@ def iniciar_sesion(driver,bono):
             driver.find_element_by_id('btnIngresar').click()
             time.sleep(15)
             print('Ingresando a la plataforma')
-            # pickle.dump( driver.get_cookies() , open("cookies.pkl","wb"))
+            pickle.dump( driver.get_cookies() , open("cookies.pkl","wb"))
             try:
                 driver.find_element_by_id('btnIngresar')
                 print('Error en el ingreso, intentantando nuevamente')

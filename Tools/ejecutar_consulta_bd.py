@@ -37,6 +37,7 @@ def ejecutar_consulta_bd(query,var_date,argumentos):
         except:
             print(f'Error {traceback.format_exc()} ')
         
+        # cursor.close()
         connection.close()
 
     except:
