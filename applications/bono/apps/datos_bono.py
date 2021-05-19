@@ -17,6 +17,8 @@ def datos_bono(bono):
         my_dict_bono['field_start_date'] = '//input[@id="txtFechaConsulta"]'
         my_dict_bono['field_end_date'] = '//input[@id="txtFechaConsultaFin"]'
         my_dict_bono['btn_exportar'] = '//button[@id="btnExportarRegistrosFecha"]'
+        my_dict_bono['btn_editar'] = '//button[@class="boton_agregar"]'
+        
         
     elif bono == 'Bono RURAL':
         my_dict_bono['sigla'] = 'RURAL'
@@ -72,6 +74,7 @@ def datos_bono(bono):
         my_dict_bono['field_start_date'] = '//input[@id="txtFechaConsulta"]'
         my_dict_bono['field_end_date'] = '//input[@id="txtFechaConsultaFin"]'
         my_dict_bono['btn_exportar'] = '//button[@id="btnExportarRegistrosFecha"]'
+        my_dict_bono['btn_editar'] = '//button[@title="Editar"]'
     else:
         print('Error en la digitación')
     return my_dict_bono

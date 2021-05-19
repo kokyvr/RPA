@@ -1,5 +1,5 @@
 #Python
-from datetime import datetime
+import os
 
 # import time
 # import sys
@@ -42,18 +42,26 @@ from datetime import datetime
 # sys.path.append(".")
 # from tools import *
 
+#Datos del Correo
+mail_user = 'contratista02@pension65.gob.pe'
+mail_pass = 'tribich.123'
+
+
+
 #Conexión a Oracle
 cxn_oracle = r"C:\instantclient_19_10"
 
 #WebDriver
 cxn_oracle = r'C:\chromedriver/chromedriver.exe'
 
+#Google Drive
+llave_json = r"{}\config\llave.json".format(os.path.dirname(os.path.dirname(__file__)))
 
 #Datos de la Base de Datos
 username = 'user_apoyo1'
 password = 'Fortinate2017'
 dsn = '10.10.10.6/p65dbprd'
-port = 1512
+port = 1521
 encoding = 'UTF-8'
 
 #Estructura de la Base de Datos
@@ -66,7 +74,7 @@ sql = """ insert into CASOS_BONOS(
             NOMBRE_BONO,
             FECHA_REGISTRO,
             DEPARTAMENTO,
-            ID_CASOS,
+            ID_CONSULTA,
             "APELLIDO PATERNO",
             "APELLIDO MATERNO",
             NOMBRES,
@@ -136,7 +144,7 @@ sql_completo = """ insert into CASOS_BONOS(
             NOMBRE_BONO,
             FECHA_REGISTRO,
             DEPARTAMENTO,
-            ID_CASOS,
+            ID_CONSULTA,
             "APELLIDO PATERNO",
             "APELLIDO MATERNO",
             NOMBRES,

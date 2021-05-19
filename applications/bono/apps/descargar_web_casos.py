@@ -27,7 +27,7 @@ def descargar_web_casos(driver,bono,tipo_bono,caso):
     time.sleep(10)
     print(f"Fecha:{bono['valor_date']}-Valor de la Plataforma: {driver.find_element_by_xpath(bono['datos_reporte']).text}")
 
-     #Eliminado archivo reporte previo
+    #Eliminado archivo reporte previo
     if os.path.isfile(bono['ruta_origen']):
         print('Archivo previo encontrado para eliminar')
         os.remove(bono['ruta_origen'])

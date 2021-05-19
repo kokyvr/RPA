@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "rpa-pension65",
+  "private_key_id": "cf345e6f12b9d222c29bbfcced9755abb41186dd",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDKtPfOkIByWgEn\nMNSs5PYb+LxZdT27VExX7AWmbE7xI2PuvOZB1p9x7KE2aaNcPaPBnEkaHvrdPaOO\nxiPssCj6nFD3vA71QPRtqy3V5w2avsnyfdW9QEcpcMTrQL5eH65RHu4Cvn9EbyrM\nzC481O/iXsMU+Nx/REjHjG3G5gpiqGDXSiZKm8ieXZ28H6iOQHiYEeyH16Ormgfr\nQMyuS0Xu7qq3fLjkZiQlj9B5JHwk0h2AWJmDYoVHGRijiTYcXGilUwpXcGVdZ+Qj\n7rKFz/TFnaPGniEwIgfvS320LA2gtrgQ+wSlqWinsMa0EZRZbKwtwZTisr21ec5q\ngNTWNX7FAgMBAAECggEAGWP7mkstW6V8eX07VoDDdxN7/DScS+euPGEbABKW/Mtz\nDAdrTBnnFO0P8HHg/X/XEDxUR8pTn/zFjO+ytkYGjAWierV6pivBsi776cwsPxLg\n1tf+OttfToiKkfElJ0MOoaifJYbZCChokwiMTiBZ/9/gzbKyY9qYxy4G3iAYcuzt\nO6s3zKXRcOUE4ajbWsKd9F/J1ERatVum6Mbp/eFYO2NBnU0y12Sk52w/z8nlaTzH\n/mAEydpO2UUup9KDerfbHC7d6LnlEhl8taaK2XIl2PXZoPv2CHWjpb4uqi6DY0la\n6yt/gdPH3xjKBKmqgY+SJwxIQwGnhAy1QxMYX0ubLQKBgQDudS//hAuYxlkTePni\nq0tO+pw0s6xeV23Rp3Q98Nfr1ISkcTd0VUFuCaCFcdHhfAeLW1E6E3z/K8t2xLuw\n0eC7VDtdI748mSvh+BCDKCM0PoXBMD+OZsd9Wdbz1+HzbLZsfsLrr7bFcUzpf1OJ\nyMXzLHV1OQN1wnUIef7Ze2Pi5wKBgQDZnn51va/2QOkinMg/dW+S3Z2w918Z/X9f\n8jlO0Q4+6v9O8zLlLRTsHrSYVfMrwqNNKG134+8bZ1z6T8glu2UCu2diHtbO7AJq\nS3NkGcDbf+YgTufRvIv3eI1Bd9YLTYTLigkcgXY3uHl4znbnAboJCdQc8NIpPbNO\nuZROC8PHcwKBgQCXU3sQVkXdwBILT3yVIkt6ZYP31gYPIMCqifA01sDQAl/i045z\nnx8Uq7tYtDCTPdiz0VGs3201qh9G0faica6CcyPxKZuybSnyDzC7ax9cKklLnkjX\nH9Z9cCP/PwM/LcBe/drJIwuEJTDABXOIPweQGKi5qWLOuob2yCS485siBQKBgQCn\nRCiFTVBjoc7QGNvd0uD4bLjZHboOWwc9cwvTZeJiP/QO9eUnu7f6KTu8X0vyVb94\n/druLNdLI+6WQx5eyiPArtSu2W9YSpUsqGPAC/9td2glayDJ1/dpNlK0gGyX8XRh\nke6g5207NOLBFUjVFEGu0swjloKiylb46rFwL6DCuwKBgQCBD7l0CpZBQSbSpxPA\nrFbT0QGRLCOOJQfPidsZsZAaqCvcGWqyTJbhP9TP45oJtY+tGHLyoZdnfApEUHUg\nVnews6O6pv6lXiaAK/f5wBADhAn5foqEIzpqrfG7ZCi7DVYOp0Z7e6+5u3pfc9Nl\nGXzfyX2Dd8LCdKk1XKcDmtIjgA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "rpa-pension65@rpa-pension65.iam.gserviceaccount.com",
+  "client_id": "111977559885116482619",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/rpa-pension65%40rpa-pension65.iam.gserviceaccount.com"
+}

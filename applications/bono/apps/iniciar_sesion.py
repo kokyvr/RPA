@@ -45,6 +45,13 @@ def iniciar_sesion(driver,bono):
             contador +=1
 
             #Acciones en la página
+            try:
+                driver.find_element_by_xpath('//button[@id="details-button"]').click()
+                driver.find_element_by_xpath('//a[@id="proceed-link"]').click()
+                print('Sin certificado de Seguridad')
+            except:
+                print('Con certificado de Seguridad')
+
             driver.find_element_by_xpath(bono['path_user']).send_keys(bono['user'])
             driver.find_element_by_xpath(bono['path_pwd']).send_keys(bono['pwd'])
             time.sleep(5)
